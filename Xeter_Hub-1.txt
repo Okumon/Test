@@ -2826,7 +2826,7 @@ spawn(function()
     
 
 --<< Window >>--
-local Library = Update:CreateWindow(Enum.KeyCode.RightControl)
+local Library = Update:Window("BexCist","9614132122",Enum.KeyCode.RightControl);
 --<< General >>--
 Main = Library:Tab("Main")
 Stats = Library:Tab("Auto Stats")
