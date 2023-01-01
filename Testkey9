@@ -1,0 +1,76 @@
+_G.Key = HUB YOU-RVZRQPV
+
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
+
+local Hwid = {
+
+    [1] = "146449fc-83be-4daf-90d5-ff017df06fa5",--Hwid You
+
+    ["146449fc-83be-4daf-90d5-ff017df06fa5"] = 1,--Hwid You
+
+    [2] = "0650vsd9559-df1b5dfb9-d1f8bdfbdf",--Hwid You
+
+    ["0650vsd9559-df1b5dfb9-d1f8bdfbdf"] = 2,--Hwid You
+
+}
+
+local Key = {
+
+    [1] = "HUB YOU-RVZRQPV",--Custom Key
+
+}
+
+local KeyNumber = Hwid[ClientId]
+
+if Hwid[KeyNumber] == ClientId then
+
+if Key[KeyNumber] == _G.Key then
+
+print("Successfully whitelisted!")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Okumon/hub/main/sword%20fighter%20sim.lua"))()
+
+else
+
+    print("Not Have Key")
+
+function Randomkey(v)
+
+        local GenKey = ""
+
+        for i = 1,v do
+
+            GenKey = GenKey ..string.char(math.random(80,90))
+
+        end
+
+        return GenKey
+
+end
+
+setclipboard("Hwid : "..ClientId.."Key : HUB YOU-"..Randomkey(2)..Randomkey(5))
+
+end
+
+else
+
+    print("Not Have Hwid")
+
+function Randomkey(v)
+
+        local GenKey = ""
+
+        for i = 1,v do
+
+            GenKey = GenKey ..string.char(math.random(80,90))
+
+        end
+
+        return GenKey
+
+end
+
+setclipboard("Hwid : "..ClientId.." Key : HUB YOU-"..Randomkey(2)..Randomkey(5))
+
+end
+
