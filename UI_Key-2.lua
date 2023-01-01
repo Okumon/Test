@@ -116,7 +116,7 @@ local SysemKeyyy = game.CoreGui:FindFirstChild("Loading")
 Main:TweenSize(UDim2.new(0,0,0,0),"Out","Quad",0.4,true)
 wait(0.4)
 SysemKeyyy:Destroy()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Okumon/hub/main/sword%20fighter%20sim.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Okumon/hub/main/NewSrc2xHub_3_1-1_2.txt"))()
 end)
 
 UICorner2.CornerRadius = UDim.new(0, 10)
@@ -162,12 +162,14 @@ HowToGetKey.BorderSizePixel = 0
 HowToGetKey.Position = UDim2.new(0,350,0,75)
 HowToGetKey.Size = UDim2.new(0, 105, 0, 35)
 HowToGetKey.Font = Enum.Font.Gotham
-HowToGetKey.Text = "HowToGetKey"
+HowToGetKey.Text = "Maru"
 HowToGetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
 HowToGetKey.TextSize = 14.000
 HowToGetKey.MouseButton1Click:Connect(function()
-setclipboard("https://youtu.be/Yy71N9M7nzU") --YouWap
-log("คุณได้คัดลอกลิงค์เป็นที่เรียบร้อยแล้ว","9649923603",2)
+getgenv().Key = "MARU-SNNIP-G122-GBXA-Y3USX-O65X3"
+getgenv().id = "821020931954573383"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))() --YouWap
+log("รันละ","9649923603",2)
 end)
 
 ButtonColor5.Thickness = 3.2
@@ -311,7 +313,7 @@ function log(Text,picture,time)
 end
 
 local SysemKey = {
-    "NoKey"
+    "Kuynahee"
 }
 TextBox.FocusLost:Connect(function()
 LoadingScript(TextBox.Text)
@@ -344,7 +346,7 @@ register_key = Text
 end
 
 function Script()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Okumon/hub/main/NewSrc2xHub_3_1-1_2.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Okumon/hub/main/Farmbabgung.lua"))()
 print("Hummmmmmmmm")
 end
 
