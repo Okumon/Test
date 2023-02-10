@@ -528,31 +528,31 @@ if game.PlaceId == 2753915549 then
                NQuest = "ChocQuest1"
                NameMon = "Cocoa Warrior"
                CFrameQuest = CFrame.new(231.742981, 25.3354111, -12199.0537, 0.998278677, -5.16006757e-08, 0.0586484075, 4.79685092e-08, 1, 6.33390442e-08, -0.0586484075, -6.04167383e-08, 0.998278677)
-         elseif Level == 2325 or Level <= 2349 then
+              elseif Level == 2325 or Level <= 2349 then
                Mon = "Chocolate Bar Battler [Lv. 2325]"
                LQuest = 2
                NQuest = "ChocQuest1"
                NameMon = "Chocolate Bar Battler"
               CFrameQuest = CFrame.new(231.742981, 25.3354111, -12199.0537, 0.998278677, -5.16006757e-08, 0.0586484075, 4.79685092e-08, 1, 6.33390442e-08, -0.0586484075, -6.04167383e-08, 0.998278677)
-         elseif Level == 2350 or Level <= 2374 then
+              elseif Level == 2350 or Level <= 2374 then
                Mon = "Sweet Thief [Lv. 2350]"
                LQuest = 1
                NQuest = "ChocQuest2"
                NameMon = "Sweet Thief"
               CFrameQuest = CFrame.new(149.867218, 24.8196201, -12775.5283, -0.0371122323, -7.14229245e-08, -0.99931109, -6.93553162e-08, 1, -6.88964548e-08, 0.99931109, 6.6750637e-08, -0.0371122323)
-         elseif MyLevel == 2375 or MyLevel <= 2399 then
+              elseif MyLevel == 2375 or MyLevel <= 2399 then
                Mon = "Candy Rebel [Lv. 2375]"
                LQuest = 2
                NQuest = "ChocQuest2"
                NameMon = "Candy Rebel"
               CFrameQuest = CFrame.new(149.867218, 24.8196201, -12775.5283, -0.0371122323, -7.14229245e-08, -0.99931109, -6.93553162e-08, 1, -6.88964548e-08, 0.99931109, 6.6750637e-08, -0.0371122323)
-	     elseif MyLevel == 2400 or MyLevel <= 2424 then
+			elseif MyLevel == 2400 or MyLevel <= 2424 then
                Mon = "Candy Pirate [Lv. 2400]"
                LQuest = 1
                NQuest = "CandyQuest1"
                NameMon = "Candy Pirate"
               CFrameQuest = CFrame.new(-1150.92224, 16.1330528, -14446.7168, -0.216739461, -1.54126809e-08, -0.976229489, -1.16627412e-07, 1, 1.0105289e-08, 0.976229489, 1.16045328e-07, -0.216739461)
-         elseif Level >= 2425 then
+             elseif Level >= 2425 then
                Mon = "Snow Demon [Lv. 2425]"
                LQuest = 2
                NQuest = "CandyQuest1"
