@@ -1024,61 +1024,121 @@ Main = Library:Tab("Main")
 
 Main:Line()
 
-Main:Label("Welcome xNero Community")
+Main:Label("Welcome Script Boku no Roblox")
 
 local Time = Main:Label("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
-Main:Seperator("Seperator")
+Main:Button("Tele Q", function()
+topos(CFrame.new(189.912201, 1895.39197, 75.6599426, -0.998774707, -1.95253827e-10, 0.049488049, 2.43137066e-09, 1, 5.30157358e-08, -0.049488049, 5.30711013e-08, -0.998774707))
+end)
+
+Main:Button("Tele M", function()
+topos(CFrame.new(296.342651, 1895.89185, -439.70578, -0.994329274, -2.23376713e-08, -0.106345057, -2.82173964e-08, 1, 5.37844755e-08, 0.106345057, 5.64802605e-08, -0.994329274))
+end)
+
+Main:Button("Tele M[HERO]", function()
+topos(CFrame.new(22.5986443, 1893.91589, -687.850891, -0.125866711, 0, -0.992047191, 0, 1, 0, 0.992047191, 0, -0.125866711))
+end)
+
+Main:Button("Tele Shop", function()
+topos(CFrame.new(453.722412, 1898.93225, -143.699921, -0.957065046, 0, 0.289873332, 0, 1, 0, -0.289873332, 0, -0.957065046))
+end)
+
+Main:Button("Copy Location CF", function()
+setclipboard('('..tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)..')')  	
+end)
+
+
+
+Main:Seperator("-- 0 "Engine", 
+-- 1 "Half Hot Half Cold", 
+-- 2 "One For All", 
+-- 3 "Quirkless", 
+-- 4 "Zero Gravity", 
+-- 5 "Regeneration", 
+-- 6 "Explosion", 
+-- 7 "Electric", 
+-- 8 "Warp Gate", 
+-- 9 "Gigantification", 
+-- 10 "Voice", 
+-- 11 "Air Propulsion", 
+-- 12 "Shock Absorption", 
+-- 13 "Deku One For All", 
+-- 14 "Hardening", 
+-- 15 "Hell Flame", 
+-- 16 "Overhaul", 
+-- 17 "Jet", 
+-- 18 "Black Hole", 
+-- 19 "Cremation", 
+-- 20 "Dark Shadow", 
+-- 21 "Muscle Augmentation", 
+-- 22 "Permeation", 
+-- 23 "Pop Off", 
+-- 24 "Somnambulist", 
+-- 25 "Navel Laser", 
+-- 26 "Decay", 
+-- 27 "Acid", 
+-- 28 "Creation", 
+-- 29 "Clones", 
+-- 30 "All For One", 
+-- 31 "Tail", 
+-- 32 "Frog", 
+-- 33 "Fierce Wings", 
+-- 34 "Tomura All For One", 
+-- 35 "Orcinus", 
+-- 36 "Manifest", 
+-- 37 "Big Fist", 
+-- 38 "Stress",")
 
 
 
 local CQ = {
 	"0",
-	"Half Hot Half Cold",
-	"One For All",
-	"Quirkless",
-	"Zero Gravity",
-	"Regeneration",
-	"Explosion",
-	"Electric",
-	"Warp Gate",
-	"Gigantification",
-	"Voice",
-	"Air Propulsion",
-	"Shock Absorption",
-	"Deku One For Al",
-	"Hardening",
-	"Hell Flame",
-	"Overhaul",
-	"Jet",
-	"Black Hole",
-	"Cremation",
+	"1",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6",
+	"7",
+	"8",
+	"9",
+	"10",
+	"11",
+	"12",
+	"13",
+	"14",
+	"15",
+	"16",
+	"17",
+	"18",
+	"19",
 	"20",
-	"Muscle Augmentation",
-	"Permeation",
-	"Pop Off",
-	"Somnambulist",
-	"Navel Laser",
-	"Decay",
-	"Acid",
-	"Creation",
-	"Clones",
-	"All For One",
-	"Tail",
-	"Frog",
-	"Fierce Wings",
-	"Tomura All For One",
-	"Orcinus",
-	"Manifest",
-	"Big Fist",
-	"Stress"
+	"21",
+	"22",
+	"23",
+	"24",
+	"25",
+	"26",
+	"27",
+	"28",
+	"29",
+	"30",
+	"31",
+	"32",
+	"33",
+	"34",
+	"35",
+	"36",
+	"37",
+	"38"
 }
 
 local Kuy = Main:Dropdown("Dropdown",CQ,function(value)
 	_G.SelectQ = value
 end)
 
-Main:Button("Test",function()
+Main:Button("Select Q",function()
 	game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(_G.SelectQ)
 end)
 
