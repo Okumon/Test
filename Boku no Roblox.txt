@@ -17,6 +17,10 @@ local Section = Tab:AddSection({
 	Name = "Main"
 })
 
+local Section = Tab2:AddSection({
+	Name = "Main"
+})
+
 Tab:AddButton({
 	Name = "Tele Q",
 	Callback = function()
@@ -53,57 +57,321 @@ Tab:AddButton({
 		end    
 })
 
-Tab2:AddLabel("0 "Engine"")
-Tab2:AddLabel("1 "Half Hot Half Cold"")
-Tab2:AddLabel("2 "One For All"")
-Tab2:AddLabel("3 "Quirkless"")
-Tab2:AddLabel("4 "Zero Gravity"")
-Tab2:AddLabel("5 "Regeneration"")
-Tab2:AddLabel("6 "Explosion"")
-Tab2:AddLabel("7 "Electric"")
-Tab2:AddLabel("8 "Warp Gate"")
-Tab2:AddLabel("9 "Gigantification"")
-Tab2:AddLabel("10 "Voice"")
-Tab2:AddLabel("11 "Air Propulsion"")
-Tab2:AddLabel("12 "Shock Absorption"")
-Tab2:AddLabel("13 "Deku One For All"")
-Tab2:AddLabel("14 "Hardening"")
-Tab2:AddLabel("15 "Hell Flame"")
-Tab2:AddLabel("16 "Overhaul"")
-Tab2:AddLabel("17 "Jet"")
-Tab2:AddLabel("18 "Black Hole"")
-Tab2:AddLabel("19 "Cremation"")
-Tab2:AddLabel("20 "Dark Shadow"")
-Tab2:AddLabel("21 "Muscle Augmentation"")
-Tab2:AddLabel("22 "Permeation"")
-Tab2:AddLabel("23 "Pop Off"")
-Tab2:AddLabel("24 "Somnambulist"")
-Tab2:AddLabel("25 "Navel Laser"")
-Tab2:AddLabel("26 "Decay"")
-Tab2:AddLabel("27 "Acid"")
-Tab2:AddLabel("28 "Creation"")
-Tab2:AddLabel("29 "Clones"")
-Tab2:AddLabel("30 "All For One"")
-Tab2:AddLabel("31 "Tail"")
-Tab2:AddLabel("32 "Frog"")
-Tab2:AddLabel("33 "Fierce Wings"")
-Tab2:AddLabel("34 "Tomura All For One"")
-Tab2:AddLabel("35 "Orcinus"")
-Tab2:AddLabel("36 "Manifest"")
-Tab2:AddLabel("37 "Big Fist"")
-Tab2:AddLabel("38 "Stress"")
 
 
-Tab2:AddTextbox({
-	Name = "Change Q",
-	Default = "default box input",
-	TextDisappear = true,
-	Callback = function(Value)
-		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(Num)
-	end	  
+
+Tab2:AddButton({
+	Name = "Engine",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(0)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
 })
-
-
+Tab2:AddButton({
+	Name = "Half Hot Half Cold",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(1)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "One For All",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(2)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Quirkless",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(3)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Zero Gravity",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(4)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Regeneration",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(5)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Explosion",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(6)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Electric",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(7)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Warp Gate",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(8)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Gigantification",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(9)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Voice",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(10)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Air Propulsion",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(11)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Shock Absorption",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(12)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Deku One For All",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(13)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Hardening",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(14)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Hell Flame",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(15)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Overhaul",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(16)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Jet",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(17)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Black Hole",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(18)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Cremation",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(19)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Dark Shadow",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(20)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Muscle Augmentation"",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(21)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Permeation",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(22)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Pop Off",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(23)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Somnambulist",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(24)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Navel Laser",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(25)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Decay",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(26)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Acid",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(27)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Creation",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(28)
+            		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Clones",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(29)
+        		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0	
+end
+})
+Tab2:AddButton({
+	Name = "All For One",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(30)
+       		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0 
+	end
+})
+Tab2:AddButton({
+	Name = "Tail",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(31)
+  	      		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+})
+Tab2:AddButton({
+	Name = "Frog",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(32)
+        		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end
+})
+Tab2:AddButton({
+	Name = "Fierce Wings",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(33)
+      		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Tomura All For One",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(34)
+      		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
+Tab2:AddButton({
+	Name = "Orcinus",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(35)
+        		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end
+})
+Tab2:AddButton({
+	Name = "Manifest",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(36)
+       		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end
+})
+Tab2:AddButton({
+	Name = "Big Fist",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(37)
+        		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end
+})
+Tab2:AddButton({
+	Name = "Stress",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(38)
+      		wait(1)
+			  game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end
+})
 
 
 
