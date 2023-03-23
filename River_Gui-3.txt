@@ -1,3 +1,23 @@
+local ScreenGui = Instance.new("ScreenGui")
+    local Toggle = Instance.new("TextButton")
+    
+    ScreenGui.Name = "ScreenGui"
+    ScreenGui.Parent = game.CoreGui
+    
+    Toggle.Name = "Toggle"
+    Toggle.Parent = ScreenGui
+    Toggle.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    Toggle.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+    Toggle.Size = UDim2.new(0, 50, 0, 50)
+    Toggle.Font = Enum.Font.Code
+    Toggle.Text = "KUY"
+    Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
+    Toggle.TextScaled = true
+    Toggle.MouseButton1Down:connect(function()
+        game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
+    end)
+
 do local GUI = game.CoreGui:FindFirstChild("SOMEXHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
        _G.Color = Color3.fromRGB(255,255,255)
    end 
@@ -1050,45 +1070,45 @@ end)
 
 
 
-Main:Seperator("-- 0 "Engine", 
--- 1 "Half Hot Half Cold", 
--- 2 "One For All", 
--- 3 "Quirkless", 
--- 4 "Zero Gravity", 
--- 5 "Regeneration", 
--- 6 "Explosion", 
--- 7 "Electric", 
--- 8 "Warp Gate", 
--- 9 "Gigantification", 
--- 10 "Voice", 
--- 11 "Air Propulsion", 
--- 12 "Shock Absorption", 
--- 13 "Deku One For All", 
--- 14 "Hardening", 
--- 15 "Hell Flame", 
--- 16 "Overhaul", 
--- 17 "Jet", 
--- 18 "Black Hole", 
--- 19 "Cremation", 
--- 20 "Dark Shadow", 
--- 21 "Muscle Augmentation", 
--- 22 "Permeation", 
--- 23 "Pop Off", 
--- 24 "Somnambulist", 
--- 25 "Navel Laser", 
--- 26 "Decay", 
--- 27 "Acid", 
--- 28 "Creation", 
--- 29 "Clones", 
--- 30 "All For One", 
--- 31 "Tail", 
--- 32 "Frog", 
--- 33 "Fierce Wings", 
--- 34 "Tomura All For One", 
--- 35 "Orcinus", 
--- 36 "Manifest", 
--- 37 "Big Fist", 
--- 38 "Stress",")
+Main:Seperator(" 0 Engine
+ 1 Half Hot Half Cold
+ 2 One For All
+ 3 Quirkless
+ 4 Zero Gravity
+ 5 Regeneration
+ 6 Explosion
+ 7 Electric
+ 8 Warp Gate
+ 9 Gigantification
+ 10 Voice
+ 11 Air Propulsion
+ 12 Shock Absorption
+ 13 Deku One For All
+ 14 Hardening
+ 15 Hell Flame
+ 16 Overhaul
+ 17 Jet
+ 18 Black Hole
+ 19 Cremation
+ 20 Dark Shadow
+ 21 Muscle Augmentation
+ 22 Permeation 
+ 23 Pop Off
+ 24 Somnambulist
+ 25 Navel Laser 
+ 26 Decay
+ 27 Acid
+ 28 Creation
+ 29 Clones
+ 30 All For One
+ 31 Tail
+ 32 Frog 
+ 33 Fierce Wings
+ 34 Tomura All For One
+ 35 Orcinus 
+ 36 Manifest 
+ 37 Big Fist 
+ 38 Stress")
 
 
 
