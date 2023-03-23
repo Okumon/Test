@@ -1049,24 +1049,22 @@ Main:Label("Welcome Script Boku no Roblox")
 local Time = Main:Label("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
 Main:Button("Tele Q", function()
-topos(CFrame.new(189.912201, 1895.39197, 75.6599426, -0.998774707, -1.95253827e-10, 0.049488049, 2.43137066e-09, 1, 5.30157358e-08, -0.049488049, 5.30711013e-08, -0.998774707)
+	topos(CFrame.new(189.912201, 1895.39197, 75.6599426, -0.998774707, -1.95253827e-10, 0.049488049, 2.43137066e-09, 1, 5.30157358e-08, -0.049488049, 5.30711013e-08, -0.998774707)
 end)
 
 Main:Button("Tele M", function()
-topos(CFrame.new(296.342651, 1895.89185, -439.70578, -0.994329274, -2.23376713e-08, -0.106345057, -2.82173964e-08, 1, 5.37844755e-08, 0.106345057, 5.64802605e-08, -0.994329274)
+	topos(CFrame.new(296.342651, 1895.89185, -439.70578, -0.994329274, -2.23376713e-08, -0.106345057, -2.82173964e-08, 1, 5.37844755e-08, 0.106345057, 5.64802605e-08, -0.994329274)
 end)
 
 Main:Button("Tele M[HERO]", function()
-topos(CFrame.new(22.5986443, 1893.91589, -687.850891, -0.125866711, 0, -0.992047191, 0, 1, 0, 0.992047191, 0, -0.125866711)
+	topos(CFrame.new(22.5986443, 1893.91589, -687.850891, -0.125866711, 0, -0.992047191, 0, 1, 0, 0.992047191, 0, -0.125866711)
 end)
 
 Main:Button("Tele Shop", function()
-topos(CFrame.new(453.722412, 1898.93225, -143.699921, -0.957065046, 0, 0.289873332, 0, 1, 0, -0.289873332, 0, -0.957065046)
+	topos(CFrame.new(453.722412, 1898.93225, -143.699921, -0.957065046, 0, 0.289873332, 0, 1, 0, -0.289873332, 0, -0.957065046)
 end)
 
-Main:Button("Copy Location CF", function()
-setclipboard('('..tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)..')')  	
-end)
+
 
 
 
