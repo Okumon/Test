@@ -1,0 +1,142 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "|\Boku no Roblox/| ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main Use",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Change Q",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Main"
+})
+
+Tab:AddButton({
+	Name = "Tele Q",
+	Callback = function()
+      		topos(CFrame.new(189.912201, 1895.39197, 75.6599426, -0.998774707, -1.95253827e-10, 0.049488049, 2.43137066e-09, 1, 5.30157358e-08, -0.049488049, 5.30711013e-08, -0.998774707))
+  	end
+})
+
+Tab:AddButton({
+	Name = "Tele M",
+	Callback = function()
+      		topos(CFrame.new(296.342651, 1895.89185, -439.70578, -0.994329274, -2.23376713e-08, -0.106345057, -2.82173964e-08, 1, 5.37844755e-08, 0.106345057, 5.64802605e-08, -0.994329274))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tele M(Hero)",
+	Callback = function()
+      		topos(CFrame.new(22.5986443, 1893.91589, -687.850891, -0.125866711, 0, -0.992047191, 0, 1, 0, 0.992047191, 0, -0.125866711))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Tele Shop",
+	Callback = function()
+      		topos(CFrame.new(453.722412, 1898.93225, -143.699921, -0.957065046, 0, 0.289873332, 0, 1, 0, -0.289873332, 0, -0.957065046))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Copy Location CF",
+	Callback = function()	
+				setclipboard('CFrame.new('..tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)..')')  	
+		end    
+})
+
+Tab2:AddLabel("0 "Engine"")
+Tab2:AddLabel("1 "Half Hot Half Cold"")
+Tab2:AddLabel("2 "One For All"")
+Tab2:AddLabel("3 "Quirkless"")
+Tab2:AddLabel("4 "Zero Gravity"")
+Tab2:AddLabel("5 "Regeneration"")
+Tab2:AddLabel("6 "Explosion"")
+Tab2:AddLabel("7 "Electric"")
+Tab2:AddLabel("8 "Warp Gate"")
+Tab2:AddLabel("9 "Gigantification"")
+Tab2:AddLabel("10 "Voice"")
+Tab2:AddLabel("11 "Air Propulsion"")
+Tab2:AddLabel("12 "Shock Absorption"")
+Tab2:AddLabel("13 "Deku One For All"")
+Tab2:AddLabel("14 "Hardening"")
+Tab2:AddLabel("15 "Hell Flame"")
+Tab2:AddLabel("16 "Overhaul"")
+Tab2:AddLabel("17 "Jet"")
+Tab2:AddLabel("18 "Black Hole"")
+Tab2:AddLabel("19 "Cremation"")
+Tab2:AddLabel("20 "Dark Shadow"")
+Tab2:AddLabel("21 "Muscle Augmentation"")
+Tab2:AddLabel("22 "Permeation"")
+Tab2:AddLabel("23 "Pop Off"")
+Tab2:AddLabel("24 "Somnambulist"")
+Tab2:AddLabel("25 "Navel Laser"")
+Tab2:AddLabel("26 "Decay"")
+Tab2:AddLabel("27 "Acid"")
+Tab2:AddLabel("28 "Creation"")
+Tab2:AddLabel("29 "Clones"")
+Tab2:AddLabel("30 "All For One"")
+Tab2:AddLabel("31 "Tail"")
+Tab2:AddLabel("32 "Frog"")
+Tab2:AddLabel("33 "Fierce Wings"")
+Tab2:AddLabel("34 "Tomura All For One"")
+Tab2:AddLabel("35 "Orcinus"")
+Tab2:AddLabel("36 "Manifest"")
+Tab2:AddLabel("37 "Big Fist"")
+Tab2:AddLabel("38 "Stress"")
+
+
+Tab2:AddTextbox({
+	Name = "Change Q",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(Num)
+	end	  
+})
+
+
+
+
+
+    function topos(Pos)
+        Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+        if game.Players.LocalPlayer.Character.Humanoid.Sit == true then game.Players.LocalPlayer.Character.Humanoid.Sit = false end
+        pcall(function() tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/210, Enum.EasingStyle.Linear),{CFrame = Pos}) end)
+        tween:Play()
+        if Distance <= 250 then
+            tween:Cancel()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Pos
+        end
+        if _G.StopTween == true then
+            tween:Cancel()
+            _G.Clip = false
+        end
+    end
+    
+    function GetDistance(target)
+        return math.floor((target.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude)
+    end
+
+    function StopTween(target)
+        if not target then
+            _G.StopTween = true
+            wait()
+            topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+            wait()
+            if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()
+            end
+            _G.StopTween = false
+            _G.Clip = false
+        end
+    end
+
