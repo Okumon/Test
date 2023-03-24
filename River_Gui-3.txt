@@ -1023,6 +1023,9 @@ end
 
 local Library = Update:Window("xNero","",Enum.KeyCode.RightControl);
 Main = Library:Tab("Main")
+QC = Library:Tab("Change Q")
+M = Library:Tab("Misc")
+
 
 Main:Line()
 
@@ -1050,45 +1053,102 @@ Main:Button("Copy Location CF", function()
 	setclipboard('('..tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)..')')  	
 end)
 
-Main:Seperator("0 Engine")
-Main:Seperator("1 Half Hot Half Cold")
-Main:Seperator("2 One For All")
-Main:Seperator("3 Quirkless")
-Main:Seperator("4 Zero Gravity")
-Main:Seperator("5 Regeneration")
-Main:Seperator("6 Explosion")
-Main:Seperator("7 Electric")
-Main:Seperator("8 Warp Gate")
-Main:Seperator("9 Gigantification")
-Main:Seperator("10 Voice")
-Main:Seperator("11 Air Propulsion")
-Main:Seperator("12 Shock Absorption")
-Main:Seperator("13 Deku One For All")
-Main:Seperator("14 Hardening")
-Main:Seperator("15 Hell Flame")
-Main:Seperator("16 Overhaul")
-Main:Seperator("17 Jet")
-Main:Seperator("18 Black Hole")
-Main:Seperator("19 Cremation")
-Main:Seperator("20 Dark Shadow")
-Main:Seperator("21 Muscle Augmentation")
-Main:Seperator("22 Permeation")
-Main:Seperator("23 Pop Off")
-Main:Seperator("24 Somnambulist")
-Main:Seperator("25 Navel Laser ")
-Main:Seperator("26 Decay")
-Main:Seperator("27 Acid")
-Main:Seperator("28 Creation")
-Main:Seperator("29 Clones")
-Main:Seperator("30 All For One")
-Main:Seperator("31 Tail")
-Main:Seperator("32 Frog")
-Main:Seperator("33 Fierce Wings")
-Main:Seperator("34 Tomura All For One")
-Main:Seperator("35 Orcinus")
-Main:Seperator("36 Manifest ")
-Main:Seperator("37 Big Fist")
-Main:Seperator("38 Stress")
+Main:Button("RTX ", function()
+	local a = game.Lighting
+a.Ambient = Color3.fromRGB(33, 33, 33)
+a.Brightness = 5.69
+a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
+a.EnvironmentDiffuseScale = 0.105
+a.EnvironmentSpecularScale = 0.522
+a.GlobalShadows = true
+a.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
+a.ShadowSoftness = 0.18
+a.GeographicLatitude = -15.525
+a.ExposureCompensation = 0.75
+b.Enabled = true
+b.Intensity = 0.99
+b.Size = 9999 
+b.Threshold = 0
+local c = Instance.new("ColorCorrectionEffect", a)
+c.Brightness = 0.015
+c.Contrast = 0.25
+c.Enabled = true
+c.Saturation = 0.2
+c.TintColor = Color3.fromRGB(217, 145, 57)
+if getgenv().mode == "Summer" then
+   c.TintColor = Color3.fromRGB(255, 220, 148)
+elseif getgenv().mode == "Autumn" then
+   c.TintColor = Color3.fromRGB(217, 145, 57)
+else
+   warn("No mode selected!")
+   print("Please select a mode")
+   b:Destroy()
+   c:Destroy()
+end
+local d = Instance.new("DepthOfFieldEffect", a)
+d.Enabled = true
+d.FarIntensity = 0.077
+d.FocusDistance = 21.54
+d.InFocusRadius = 20.77
+d.NearIntensity = 0.277
+local e = Instance.new("ColorCorrectionEffect", a)
+e.Brightness = 0
+e.Contrast = -0.07
+e.Saturation = 0
+e.Enabled = true
+e.TintColor = Color3.fromRGB(255, 247, 239)
+local e2 = Instance.new("ColorCorrectionEffect", a)
+e2.Brightness = 0.2
+e2.Contrast = 0.45
+e2.Saturation = -0.1
+e2.Enabled = true
+e2.TintColor = Color3.fromRGB(255, 255, 255)
+local s = Instance.new("SunRaysEffect", a)
+s.Enabled = true
+s.Intensity = 0.01
+s.Spread = 0.146
+end)
+
+QC:Seperator("0 Engine")
+QC:Seperator("1 Half Hot Half Cold")
+QC:Seperator("2 One For All")
+QC:Seperator("3 Quirkless")
+QC:Seperator("4 Zero Gravity")
+QC:Seperator("5 Regeneration")
+QC:Seperator("6 Explosion")
+QC:Seperator("7 Electric")
+QC:Seperator("8 Warp Gate")
+QC:Seperator("9 Gigantification")
+QC:Seperator("10 Voice")
+QC:Seperator("11 Air Propulsion")
+QC:Seperator("12 Shock Absorption")
+QC:Seperator("13 Deku One For All")
+QC:Seperator("14 Hardening")
+QC:Seperator("15 Hell Flame")
+QC:Seperator("16 Overhaul")
+QC:Seperator("17 Jet")
+QC:Seperator("18 Black Hole")
+QC:Seperator("19 Cremation")
+QC:Seperator("20 Dark Shadow")
+QC:Seperator("21 Muscle Augmentation")
+QC:Seperator("22 Permeation")
+QC:Seperator("23 Pop Off")
+QC:Seperator("24 Somnambulist")
+QC:Seperator("25 Navel Laser ")
+QC:Seperator("26 Decay")
+QC:Seperator("27 Acid")
+QC:Seperator("28 Creation")
+QC:Seperator("29 Clones")
+QC:Seperator("30 All For One")
+QC:Seperator("31 Tail")
+QC:Seperator("32 Frog")
+QC:Seperator("33 Fierce Wings")
+QC:Seperator("34 Tomura All For One")
+QC:Seperator("35 Orcinus")
+QC:Seperator("36 Manifest ")
+QC:Seperator("37 Big Fist")
+QC:Seperator("38 Stress")
 
 
 
@@ -1137,13 +1197,21 @@ local CQ = {
 	"38"
 }
 
-local Kuy = Main:Dropdown("Dropdown",CQ,function(value)
+local Kuy = QC:Dropdown("Dropdown",CQ,function(value)
 	_G.SelectQ = value
 end)
 
-Main:Button("Select Q",function()
+QC:Button("Select Q",function()
 	game:GetService("ReplicatedStorage").StaffReplicated.QuirkChange:FireServer(_G.SelectQ)
 end)
+
+    M:Button("Rejoin Server",function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end)
+    
+    M:Button("Server Hop",function()
+        Hop()
+    end)
 
 
     function topos(Pos)
@@ -1177,4 +1245,66 @@ end)
             _G.StopTween = false
             _G.Clip = false
         end
+    end
+
+function Hop()
+        local PlaceID = game.PlaceId
+        local AllIDs = {}
+        local foundAnything = ""
+        local actualHour = os.date("!*t").hour
+        local Deleted = false
+        function TPReturner()
+            local Site;
+            if foundAnything == "" then
+                Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+            else
+                Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+            end
+            local ID = ""
+            if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+                foundAnything = Site.nextPageCursor
+            end
+            local num = 0;
+            for i,v in pairs(Site.data) do
+                local Possible = true
+                ID = tostring(v.id)
+                if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                    for _,Existing in pairs(AllIDs) do
+                        if num ~= 0 then
+                            if ID == tostring(Existing) then
+                                Possible = false
+                            end
+                        else
+                            if tonumber(actualHour) ~= tonumber(Existing) then
+                                local delFile = pcall(function()
+                                    AllIDs = {}
+                                    table.insert(AllIDs, actualHour)
+                                end)
+                            end
+                        end
+                        num = num + 1
+                    end
+                    if Possible == true then
+                        table.insert(AllIDs, ID)
+                        wait()
+                        pcall(function()
+                            wait()
+                            game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                        end)
+                        wait(4)
+                    end
+                end
+            end
+        end
+        function Teleport() 
+            while wait() do
+                pcall(function()
+                    TPReturner()
+                    if foundAnything ~= "" then
+                        TPReturner()
+                    end
+                end)
+            end
+        end
+        Teleport()
     end
