@@ -93,112 +93,72 @@ function Update:Window(text,logo,keybind)
 	Main.Parent = SOMEXHUB
 	Main.ClipsDescendants = true
 	Main.AnchorPoint = Vector2.new(0.5,0.5)
-	Main.BackgroundColor3 = _G.Color
+	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	
-	Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
-
-	local MCNR = Instance.new("UICorner")
-	MCNR.Name = "MCNR"
-	MCNR.Parent = Main
-
+	Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
+	
 	local Top = Instance.new("Frame")
 	Top.Name = "Top"
 	Top.Parent = Main
-	Top.BackgroundColor3 = Color3.fromRGB(20, 21, 22)
+	Top.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Top.Size = UDim2.new(0, 656, 0, 27)
-
-	local TCNR = Instance.new("UICorner")
-	TCNR.Name = "TCNR"
-	TCNR.Parent = Top
-
-	local Logo = Instance.new("ImageLabel")
-	Logo.Name = "Logo"
-	Logo.Parent = Top
-	Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Logo.BackgroundTransparency = 1.000
-	Logo.Position = UDim2.new(0, 5, 0, 1)
-	Logo.Size = UDim2.new(0, 25, 0, 25)
-	Logo.Image = "http://www.roblox.com/asset/?id=10241251176"--รูป
-
+	
 	local Name = Instance.new("TextLabel")
 	Name.Name = "Name"
 	Name.Parent = Top
 	Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Name.BackgroundTransparency = 1.000
-	Name.Position = UDim2.new(0.0509756112, 0, 0, 0)
-	Name.Size = UDim2.new(0, 55, 0, 27)
+	Name.Position = UDim2.new(0.0609756112, -25, 0, 0)
+	Name.Size = UDim2.new(0, 61, 0, 27)
 	Name.Font = Enum.Font.GothamSemibold
 	Name.Text = text
 	Name.TextColor3 = Color3.fromRGB(225, 225, 225)
 	Name.TextSize = 17.000
 
 	local Hub = Instance.new("TextLabel")
-	Hub.Name = "MON"
+	Hub.Name = "Hub"
 	Hub.Parent = Top
-	Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Hub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 	Hub.BackgroundTransparency = 1.000
-	Hub.Position = UDim2.new(0, 80, 0, 0)
+	Hub.Position = UDim2.new(0, 85, 0, 0)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
-	Hub.Text = "MON"
-	Hub.TextColor3 = Color3.fromRGB(153,102,255)
+	Hub.Text = " HUB | BF MOBILE OR PC"
+	Hub.TextColor3 = _G.Color
 	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
-
-	local BindButton = Instance.new("TextButton")
-	BindButton.Name = "BindButton"
-	BindButton.Parent = Top
-	BindButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	BindButton.BackgroundTransparency = 1.000
-	BindButton.Position = UDim2.new(0.807561002, 0, 0, 0)
-	BindButton.Size = UDim2.new(0, 100, 0, 27)
-	BindButton.Font = Enum.Font.GothamSemibold
-	BindButton.Text = "              [ O K U ]"
-	BindButton.TextColor3 = Color3.fromRGB(153,102,255)
-	BindButton.TextSize = 11.000
 	
-	BindButton.MouseButton1Click:Connect(function ()
-		BindButton.Text = "[ ... ]"
-		local inputwait = game:GetService("UserInputService").InputBegan:wait()
-		local shiba = inputwait.KeyCode == Enum.KeyCode.Unknown and inputwait.UserInputType or inputwait.KeyCode
-
-		if shiba.Name ~= "Focus" and shiba.Name ~= "MouseMovement" then
-			BindButton.Text = "[ "..shiba.Name.." ]"
-			yoo = shiba.Name
-		end
-	end)
+	local Hubb = Instance.new("TextLabel")
+	Hubb.Name = "Hubb"
+	Hubb.Parent = Top
+	Hubb.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	Hubb.BackgroundTransparency = 1.000
+	Hubb.Position = UDim2.new(0, 480, 0, 0)
+	Hubb.Size = UDim2.new(0, 81, 0, 27)
+	Hubb.Font = Enum.Font.GothamSemibold
+	Hubb.Text = "ม่อนก็อปมา;-;"
+	Hubb.TextColor3 = _G.Color
+	Hubb.TextSize = 17.000
+	Hubb.TextXAlignment = Enum.TextXAlignment.Left
 
 	local Tab = Instance.new("Frame")
 	Tab.Name = "Tab"
 	Tab.Parent = Main
-	Tab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Tab.BackgroundTransparency = 1.000
 	Tab.Position = UDim2.new(0, 5, 0, 30)
-	Tab.Size = UDim2.new(0, 150, 0, 365)
+	Tab.Size = UDim2.new(0, 150, 0, 350)
 
-	local Tab1 = Instance.new("Frame")  --xd
-	Tab1.Name = "Tab"
-	Tab1.Parent = Main
-	Tab1.BackgroundTransparency = 1.000
-	Tab1.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
-	Tab1.Position = UDim2.new(0, 5, 0, 30)
-	Tab1.Size = UDim2.new(0, 115, 0, 100)
-
-	
-	local TCNR11 = Instance.new("UICorner")
-	TCNR11.Name = "TCNR"
-	TCNR11.Parent = IMGNAME
-
-	local TCNR1 = Instance.new("UICorner")
-	TCNR1.Name = "TCNR"
-	TCNR1.Parent = Tab1
-
-	local TCNR = Instance.new("UICorner")
-	TCNR.Name = "TCNR"
-	TCNR.Parent = Tab
-
---เอามั้ย By NaJa
+local LogoHub = Instance.new("ImageLabel")
+	LogoHub.Name = "LogoHub"
+	LogoHub.Parent = Tab
+	LogoHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	LogoHub.BackgroundTransparency = 1.000
+	LogoHub.Position = UDim2.new(0, 0, 0, 1)
+	LogoHub.Size = UDim2.new(0, 150, 0, 150)
+	LogoHub.Image = "http://www.roblox.com/asset/?id="..tostring(10581854321)
 
 	local ScrollTab = Instance.new("ScrollingFrame")
 	ScrollTab.Name = "ScrollTab"
@@ -214,7 +174,7 @@ function Update:Window(text,logo,keybind)
 	PLL.Name = "PLL"
 	PLL.Parent = ScrollTab
 	PLL.SortOrder = Enum.SortOrder.LayoutOrder
-	PLL.Padding = UDim.new(0, 7.5)
+	PLL.Padding = UDim.new(0, 15)
 
 	local PPD = Instance.new("UIPadding")
 	PPD.Name = "PPD"
@@ -225,13 +185,9 @@ function Update:Window(text,logo,keybind)
 	local Page = Instance.new("Frame")
 	Page.Name = "Page"
 	Page.Parent = Main
-	Page.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
 	Page.Size = UDim2.new(0, 490, 0, 365)
-
-	local PCNR = Instance.new("UICorner")
-	PCNR.Name = "PCNR"
-	PCNR.Parent = Page
 
 	local MainPage = Instance.new("Frame")
 	MainPage.Name = "MainPage"
@@ -240,16 +196,6 @@ function Update:Window(text,logo,keybind)
 	MainPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	MainPage.BackgroundTransparency = 1.000
 	MainPage.Size = UDim2.new(0, 490, 0, 365)
-
-	local IM10GNAME = Instance.new("ImageLabel")
-    IM10GNAME.Name = "IMGDATA"
-    IM10GNAME.Parent = MainPage
-    IM10GNAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	IM10GNAME.BackgroundTransparency = 1.000
-	IM10GNAME.ImageTransparency = 0.750
-    IM10GNAME.Position = UDim2.new(0, 0, 0, 0)
-    IM10GNAME.Size = UDim2.new(0, 490, 0, 365)
-    IM10GNAME.Image = "http://www.roblox.com/asset/?id=10241251176"--รูปพื้นหลังui
 
 	local PageList = Instance.new("Folder")
 	PageList.Name = "PageList"
@@ -277,27 +223,37 @@ function Update:Window(text,logo,keybind)
 				Main:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.4,true)
 			else
 				uihide = false
-				Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
+				Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
 			end
 		end
 	end)
 	
 	local uitab = {}
 	
-	function uitab:Tab(text)
+	function uitab:Tab(text,image)
+	    local Image = image
+	    
 		local TabButton = Instance.new("TextButton")
 		TabButton.Parent = ScrollTab
 		TabButton.Name = text.."Server"
 		TabButton.Text = text
-		TabButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-		TabButton.BackgroundTransparency = 1.000
-		TabButton.Size = UDim2.new(0, 130, 0, 25)
+		TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+		TabButton.BackgroundTransparency = 0.150
+		TabButton.Size = UDim2.new(0, 130, 0, 23)
 		TabButton.Font = Enum.Font.GothamSemibold
-		TabButton.Position = UDim2.new(0, 0, 0, 0)
-		TabButton.TextColor3 = Color3.fromRGB(153,102,255)
+		TabButton.TextColor3 = Color3.fromRGB(225, 225, 225)
 		TabButton.TextSize = 15.000
 		TabButton.TextTransparency = 0.500
 
+            local PageImage = Instance.new("ImageLabel")
+            PageImage.Name = "PageImage"
+            PageImage.Parent = TabButton
+            PageImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            PageImage.BackgroundTransparency = 1.000
+            PageImage.Position = UDim2.new(0, 5, 0, 5)
+            PageImage.Size = UDim2.new(0, 15, 0, 15)
+            PageImage.Image = "rbxassetid://"..tostring(Image)
+            
 		local MainFramePage = Instance.new("ScrollingFrame")
 		MainFramePage.Name = text.."_Page"
 		MainFramePage.Parent = PageList
@@ -376,6 +332,7 @@ function Update:Window(text,logo,keybind)
 			local TextBtn = Instance.new("TextButton")
 			local UICorner_2 = Instance.new("UICorner")
 			local Black = Instance.new("Frame")
+			local IMGTOG = Instance.new("ImageLabel")
 			local UICorner_3 = Instance.new("UICorner")
 			
 			Button.Name = "Button"
@@ -384,16 +341,17 @@ function Update:Window(text,logo,keybind)
 			Button.Size = UDim2.new(0, 470, 0, 31)
 			
 			UICorner.CornerRadius = UDim.new(0, 5)
+			UICorner.Parent = Button
 			
 			TextBtn.Name = "TextBtn"
 			TextBtn.Parent = Button
-			TextBtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			TextBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			TextBtn.Position = UDim2.new(0, 1, 0, 1)
 			TextBtn.Size = UDim2.new(0, 468, 0, 29)
 			TextBtn.AutoButtonColor = false
 			TextBtn.Font = Enum.Font.GothamSemibold
 			TextBtn.Text = text
-			TextBtn.TextColor3 = Color3.fromRGB(153,102,255)
+			TextBtn.TextColor3 = Color3.fromRGB(225, 225, 225)
 			TextBtn.TextSize = 15.000
 			
 			UICorner_2.CornerRadius = UDim.new(0, 5)
@@ -402,11 +360,11 @@ function Update:Window(text,logo,keybind)
 			Black.Name = "Black"
 			Black.Parent = Button
 			Black.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			Black.BackgroundTransparency = 0.800
+			Black.BackgroundTransparency = 1.000
 			Black.BorderSizePixel = 0
 			Black.Position = UDim2.new(0, 1, 0, 1)
-			Black.Size = UDim2.new(0, 355, 0, 25)
-			
+			Black.Size = UDim2.new(0, 468, 0, 29)
+	        
 			UICorner_3.CornerRadius = UDim.new(0, 5)
 			UICorner_3.Parent = Black
 
@@ -445,19 +403,20 @@ function Update:Window(text,logo,keybind)
 			local ToggleImage = Instance.new("Frame")
 			local UICorner_3 = Instance.new("UICorner")
 			local Circle = Instance.new("Frame")
+			local IMGTOG = Instance.new("ImageLabel")
 			local UICorner_4 = Instance.new("UICorner")
 
 			Toggle.Name = "Toggle"
 			Toggle.Parent = MainFramePage
 			Toggle.BackgroundColor3 = _G.Color
-			Toggle.Size = UDim2.new(0, 375, 0, 25)
+			Toggle.Size = UDim2.new(0, 470, 0, 31)
 
 			UICorner.CornerRadius = UDim.new(0, 5)
-			
+			UICorner.Parent = Toggle
 
 			Button.Name = "Button"
 			Button.Parent = Toggle
-			Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Button.Position = UDim2.new(0, 1, 0, 1)
 			Button.Size = UDim2.new(0, 468, 0, 29)
 			Button.AutoButtonColor = false
@@ -471,23 +430,45 @@ function Update:Window(text,logo,keybind)
 
 			Label.Name = "Label"
 			Label.Parent = Toggle
-			Label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Label.BackgroundTransparency = 1.000
 			Label.Position = UDim2.new(0, 1, 0, 1)
-			Label.Size = UDim2.new(0, 363, 0, 29)
+			Label.Size = UDim2.new(0, 468, 0, 29)
 			Label.Font = Enum.Font.GothamSemibold
 			Label.Text = text
-			Label.TextColor3 = Color3.fromRGB(153,102,255)
+			Label.TextColor3 = Color3.fromRGB(225, 225, 225)
 			Label.TextSize = 15.000
 
 			ToggleImage.Name = "ToggleImage"
 			ToggleImage.Parent = Toggle
 			ToggleImage.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
-			ToggleImage.Position = UDim2.new(0, 310, 0, 5)
+			ToggleImage.Position = UDim2.new(0, 415, 0, 5)
 			ToggleImage.Size = UDim2.new(0, 45, 0, 20)
 
 			UICorner_3.CornerRadius = UDim.new(0, 10)
 			UICorner_3.Parent = ToggleImage
+
+local tggc = Instance.new("TextLabel")
+	tggc.Name = "tggc"
+	tggc.Parent = Toggle
+	tggc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	tggc.BackgroundTransparency = 1.000
+	tggc.Position = UDim2.new(0, 40, 0, 3)
+	tggc.Size = UDim2.new(0, 81, 0, 27)
+	tggc.Font = Enum.Font.GothamSemibold
+    tggc.Text = "|"
+	tggc.TextColor3 = _G.Color
+	tggc.TextSize = 26.000
+	tggc.TextXAlignment = Enum.TextXAlignment.Left
+
+local LogoToggle = Instance.new("ImageLabel")
+	LogoToggle.Name = "LogoToggle"
+	LogoToggle.Parent = Toggle
+	LogoToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	LogoToggle.BackgroundTransparency = 1.000
+	LogoToggle.Position = UDim2.new(0, 7, 0, 2)
+	LogoToggle.Size = UDim2.new(0, 26, 0, 26)
+	LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(logo)
 
 			Circle.Name = "Circle"
 			Circle.Parent = ToggleImage
@@ -543,21 +524,21 @@ function Update:Window(text,logo,keybind)
 			
 			Dropdown.Name = "Dropdown"
 			Dropdown.Parent = MainFramePage
-			Dropdown.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			Dropdown.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Dropdown.ClipsDescendants = true
-			Dropdown.Size = UDim2.new(0, 357, 0, 35)
+			Dropdown.Size = UDim2.new(0, 470, 0, 31)
 			
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Dropdown
 			
 			DropTitle.Name = "DropTitle"
 			DropTitle.Parent = Dropdown
-			DropTitle.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+			DropTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropTitle.BackgroundTransparency = 1.000
-			DropTitle.Size = UDim2.new(0, 357, 0, 25)
+			DropTitle.Size = UDim2.new(0, 470, 0, 31)
 			DropTitle.Font = Enum.Font.GothamSemibold
 			DropTitle.Text = text.. " : "
-			DropTitle.TextColor3 = Color3.fromRGB(0, 225, 225)
+			DropTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
 			DropTitle.TextSize = 15.000
 			
 			DropScroll.Name = "DropScroll"
@@ -566,8 +547,8 @@ function Update:Window(text,logo,keybind)
 			DropScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropScroll.BackgroundTransparency = 1.000
 			DropScroll.BorderSizePixel = 0
-			DropScroll.Position = UDim2.new(0, 0, 0, 40)
-			DropScroll.Size = UDim2.new(0, 357, 0, 90)
+			DropScroll.Position = UDim2.new(0, 0, 0, 31)
+			DropScroll.Size = UDim2.new(0, 470, 0, 100)
 			DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
 			DropScroll.ScrollBarThickness = 3
 			
@@ -581,16 +562,16 @@ function Update:Window(text,logo,keybind)
 			
 			DropImage.Name = "DropImage"
 			DropImage.Parent = Dropdown
-			DropImage.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+			DropImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropImage.BackgroundTransparency = 1.000
-			DropImage.Position = UDim2.new(0, 445, 0, 6)
+			DropImage.Position = UDim2.new(0, 435, 0, 6)
 			DropImage.Rotation = 180.000
 			DropImage.Size = UDim2.new(0, 20, 0, 20)
-			DropImage.Image = "rbxassetid://6031090990"
+			DropImage.Image = "rbxassetid://10162644180"
 			
 			DropButton.Name = "DropButton"
 			DropButton.Parent = Dropdown
-			DropButton.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+			DropButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropButton.BackgroundTransparency = 1.000
 			DropButton.Size = UDim2.new(0, 470, 0, 31)
 			DropButton.Font = Enum.Font.SourceSans
@@ -605,10 +586,10 @@ function Update:Window(text,logo,keybind)
 				Item.Parent = DropScroll
 				Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Item.BackgroundTransparency = 1.000
-				Item.Size = UDim2.new(0, 350, 0, 26)
+				Item.Size = UDim2.new(0, 460, 0, 26)
 				Item.Font = Enum.Font.GothamSemibold
 				Item.Text = tostring(v)
-				Item.TextColor3 = Color3.fromRGB(0, 225, 225)
+				Item.TextColor3 = Color3.fromRGB(225, 225, 225)
 				Item.TextSize = 13.000
 				Item.TextTransparency = 0.500
 
@@ -630,7 +611,7 @@ function Update:Window(text,logo,keybind)
 
 				Item.MouseButton1Click:Connect(function()
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,375,0,31),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -646,7 +627,7 @@ function Update:Window(text,logo,keybind)
 			DropButton.MouseButton1Click:Connect(function()
 				if isdropping == false then
 					isdropping = true
-					Dropdown:TweenSize(UDim2.new(0,375,0,131),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,131),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -654,7 +635,7 @@ function Update:Window(text,logo,keybind)
 					):Play()
 				else
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,375,0,31),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -670,10 +651,10 @@ function Update:Window(text,logo,keybind)
 				Item.Parent = DropScroll
 				Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Item.BackgroundTransparency = 1.000
-				Item.Size = UDim2.new(0, 370, 0, 26)
+				Item.Size = UDim2.new(0, 470, 0, 26)
 				Item.Font = Enum.Font.GothamSemibold
 				Item.Text = tostring(t)
-				Item.TextColor3 = Color3.fromRGB(0, 225, 225)
+				Item.TextColor3 = Color3.fromRGB(225, 225, 225)
 				Item.TextSize = 13.000
 				Item.TextTransparency = 0.500
 
@@ -746,7 +727,7 @@ function Update:Window(text,logo,keybind)
 			Slider.Parent = MainFramePage
 			Slider.BackgroundColor3 = _G.Color
 			Slider.BackgroundTransparency = 0
-			Slider.Size = UDim2.new(0, 347, 0, 51)
+			Slider.Size = UDim2.new(0, 470, 0, 51)
 
 			slidercorner.CornerRadius = UDim.new(0, 5)
 			slidercorner.Name = "slidercorner"
@@ -754,9 +735,9 @@ function Update:Window(text,logo,keybind)
 
 			sliderr.Name = "sliderr"
 			sliderr.Parent = Slider
-			sliderr.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			sliderr.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			sliderr.Position = UDim2.new(0, 1, 0, 1)
-			sliderr.Size = UDim2.new(0, 347, 0, 49)
+			sliderr.Size = UDim2.new(0, 468, 0, 49)
 
 			sliderrcorner.CornerRadius = UDim.new(0, 5)
 			sliderrcorner.Name = "sliderrcorner"
@@ -764,13 +745,13 @@ function Update:Window(text,logo,keybind)
 
 			SliderLabel.Name = "SliderLabel"
 			SliderLabel.Parent = sliderr
-			SliderLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+			SliderLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			SliderLabel.BackgroundTransparency = 1.000
 			SliderLabel.Position = UDim2.new(0, 15, 0, 0)
 			SliderLabel.Size = UDim2.new(0, 180, 0, 26)
 			SliderLabel.Font = Enum.Font.GothamSemibold
 			SliderLabel.Text = text
-			SliderLabel.TextColor3 = Color3.fromRGB(0, 225, 225)
+			SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
 			SliderLabel.TextSize = 16.000
 			SliderLabel.TextTransparency = 0
 			SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -779,14 +760,14 @@ function Update:Window(text,logo,keybind)
 			HAHA.Parent = sliderr
 			HAHA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			HAHA.BackgroundTransparency = 1.000
-			HAHA.Size = UDim2.new(0, 347, 0, 29)
+			HAHA.Size = UDim2.new(0, 468, 0, 29)
 
 			AHEHE.Name = "AHEHE"
 			AHEHE.Parent = sliderr
 			AHEHE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			AHEHE.BackgroundTransparency = 1.000
 			AHEHE.Position = UDim2.new(0, 10, 0, 35)
-			AHEHE.Size = UDim2.new(0, 347, 0, 5)
+			AHEHE.Size = UDim2.new(0, 448, 0, 5)
 			AHEHE.Font = Enum.Font.SourceSans
 			AHEHE.Text = ""
 			AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -794,8 +775,8 @@ function Update:Window(text,logo,keybind)
 
 			bar.Name = "bar"
 			bar.Parent = AHEHE
-			bar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			bar.Size = UDim2.new(0, 347, 0, 5)
+			bar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			bar.Size = UDim2.new(0, 448, 0, 5)
 
 			bar1.Name = "bar1"
 			bar1.Parent = bar
@@ -836,7 +817,7 @@ function Update:Window(text,logo,keybind)
 			TextBox.Position = UDim2.new(0, 1, 0, 1)
 			TextBox.Size = UDim2.new(0, 63, 0, 16)
 			TextBox.Font = Enum.Font.GothamSemibold
-			TextBox.TextColor3 = Color3.fromRGB(0, 225, 225)
+			TextBox.TextColor3 = Color3.fromRGB(225, 225, 225)
 			TextBox.TextSize = 9.000
 			TextBox.Text = set
 			TextBox.TextTransparency = 0
@@ -923,7 +904,7 @@ function Update:Window(text,logo,keybind)
 
 			Textboxx.Name = "Textboxx"
 			Textboxx.Parent = Textbox
-			Textboxx.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			Textboxx.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Textboxx.Position = UDim2.new(0, 1, 0, 1)
 			Textboxx.Size = UDim2.new(0, 468, 0, 29)
 
@@ -933,20 +914,20 @@ function Update:Window(text,logo,keybind)
 
 			TextboxLabel.Name = "TextboxLabel"
 			TextboxLabel.Parent = Textbox
-			TextboxLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+			TextboxLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			TextboxLabel.BackgroundTransparency = 1.000
 			TextboxLabel.Position = UDim2.new(0, 15, 0, 0)
 			TextboxLabel.Text = text
 			TextboxLabel.Size = UDim2.new(0, 145, 0, 31)
 			TextboxLabel.Font = Enum.Font.GothamSemibold
-			TextboxLabel.TextColor3 = Color3.fromRGB(153,102,255)
+			TextboxLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
 			TextboxLabel.TextSize = 16.000
 			TextboxLabel.TextTransparency = 0
 			TextboxLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 			txtbtn.Name = "txtbtn"
 			txtbtn.Parent = Textbox
-			txtbtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+			txtbtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			txtbtn.BackgroundTransparency = 1.000
 			txtbtn.Position = UDim2.new(0, 1, 0, 1)
 			txtbtn.Size = UDim2.new(0, 468, 0, 29)
@@ -957,13 +938,13 @@ function Update:Window(text,logo,keybind)
 
 			RealTextbox.Name = "RealTextbox"
 			RealTextbox.Parent = Textbox
-			RealTextbox.BackgroundColor3 = Color3.fromRGB(45, 45, 45) --ปรับสีช่องใส่ข้อความ
+			RealTextbox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			RealTextbox.BackgroundTransparency = 0
 			RealTextbox.Position = UDim2.new(0, 360, 0, 4)
 			RealTextbox.Size = UDim2.new(0, 100, 0, 24)
 			RealTextbox.Font = Enum.Font.GothamSemibold
 			RealTextbox.Text = ""
-			RealTextbox.TextColor3 = Color3.fromRGB(153,102,255)
+			RealTextbox.TextColor3 = Color3.fromRGB(225, 225, 225)
 			RealTextbox.TextSize = 11.000
 			RealTextbox.TextTransparency = 0
 
@@ -988,7 +969,7 @@ function Update:Window(text,logo,keybind)
 			Label.BackgroundTransparency = 1.000
 			Label.Size = UDim2.new(0, 470, 0, 20)
 			Label.Font = Enum.Font.GothamSemibold
-			Label.TextColor3 = Color3.fromRGB(153,102,255)
+			Label.TextColor3 = Color3.fromRGB(225, 225, 225)
 			Label.TextSize = 16.000
 			Label.Text = text
 			Label.TextXAlignment = Enum.TextXAlignment.Left
@@ -1011,9 +992,9 @@ function Update:Window(text,logo,keybind)
 			
 			Seperator.Name = "Seperator"
 			Seperator.Parent = MainFramePage
-			Seperator.BackgroundColor3 = Color3.fromRGB(153,102,255)
+			Seperator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Seperator.BackgroundTransparency = 1.000
-			Seperator.Size = UDim2.new(0, 375, 0, 21)
+			Seperator.Size = UDim2.new(0, 470, 0, 20)
 			
 			Sep1.Name = "Sep1"
 			Sep1.Parent = Seperator
@@ -1024,20 +1005,20 @@ function Update:Window(text,logo,keybind)
 			
 			Sep2.Name = "Sep2"
 			Sep2.Parent = Seperator
-			Sep2.BackgroundColor3 = Color3.fromRGB(153,102,255)
+			Sep2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 			Sep2.BackgroundTransparency = 1.000
-			Sep2.Position = UDim2.new(0, 120, 0, 0)
+			Sep2.Position = UDim2.new(0, 185, 0, 0)
 			Sep2.Size = UDim2.new(0, 100, 0, 20)
 			Sep2.Font = Enum.Font.GothamSemibold
 			Sep2.Text = text
-			Sep2.TextColor3 = Color3.fromRGB(255,255,255)
+			Sep2.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Sep2.TextSize = 14.000
 			
 			Sep3.Name = "Sep3"
 			Sep3.Parent = Seperator
 			Sep3.BackgroundColor3 = _G.Color
 			Sep3.BorderSizePixel = 0
-			Sep3.Position = UDim2.new(0, 270, 0, 10)
+			Sep3.Position = UDim2.new(0, 390, 0, 10)
 			Sep3.Size = UDim2.new(0, 80, 0, 1)
 		end
 
@@ -1047,7 +1028,7 @@ function Update:Window(text,logo,keybind)
 			
 			Linee.Name = "Linee"
 			Linee.Parent = MainFramePage
-			Linee.BackgroundColor3 = Color3.fromRGB(153,102,255)
+			Linee.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 			Linee.BackgroundTransparency = 1.000
 			Linee.Position = UDim2.new(0, 0, 0.119999997, 0)
 			Linee.Size = UDim2.new(0, 470, 0, 20)
@@ -1103,6 +1084,19 @@ Main:Label("Welcome to OKUMON HUB")
 
 local Time = Main:Label("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
+Client = Main:Label("FPS Server")
+
+function UpdateClient()
+    local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+    local Fps = workspace:GetRealPhysicsFPS()
+    Client:Set("Fps : "..Fps.." Ping : "..Ping)
+end
+
+spawn(function()
+    while true do wait(.1)
+        UpdateClient()
+    end
+end)
  Main:Line()
 
    function UpdateTime()
@@ -1121,54 +1115,44 @@ local Time = Main:Label("Executor Time");spawn(function() getgenv().Time = true;
         end
     end)
     
-Client = Main:Label("FPS Server")
 
-function UpdateClient()
-    local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-    local Fps = workspace:GetRealPhysicsFPS()
-    Client:Set("Fps : "..Fps.." Ping : "..Ping)
-end
-
-spawn(function()
-    while true do wait(.1)
-        UpdateClient()
-    end
-end)
 
 
 Main:Seperator("Main Script")
 
-            WeaponList = {}
-    
-    for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
-        if v:IsA("Tool") then
-            table.insert(WeaponList ,v.Name)
-        end
-    end
-    
-    local SelectWeapona = Main:Dropdown("Select Equipment",WeaponList,function(value)
-        _G.SelectWeapon = value
-    end)
-    
-    Main:Button("Refresh Weapon",function()
+
+
+Weaponlist = {}
+Weapon = nil
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    table.insert(Weaponlist,v.Name)
+end
+
+local SelectWeapona = Main:Dropdown("select weapon", " ", Weaponlist, function(currentOption)
+    Weapon = currentOption
+end)
+
+Main:Button("Refresh Weapon",function()
         SelectWeapona:Clear()
         for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
             SelectWeapona:Add(v.Name)
         end
     end)
-    
-Main:Toggle("Auto Equip",function(a)
-_G.AutoEquip = a
+
+Section:NewToggle("Auto Equip", " ", function(a)
+AutoEquiped = a
 end)
 
-
 spawn(function()
-        while wait() do
-            if _G.AutoEquip then
-                pcall(function()
-                EquipWeapon(_G.SelectWeapon)
-				end
-			end)
+while wait() do
+if AutoEquiped then
+pcall(function()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
+end)
+end
+end
+end)
 			
 			
 Main:Button("Refresh Weapon",function()
@@ -1323,7 +1307,7 @@ end)
 
 
 
-S:Button("Auto Rejoin", function(value)
+S:Toggle("Auto Rejoin", function(value)
   getgenv().ABC = value
 end)
 
