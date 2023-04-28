@@ -1120,7 +1120,7 @@ for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) 
     table.insert(Weaponlist,v.Name)
 end
 
-local SelectWeapona = Main:Dropdown("select weapon", " ", Weaponlist, function(currentOption)
+local SelectWeapona = Main:Dropdown("select weapon", Weaponlist, function(currentOption)
     Weapon = currentOption
 end)
 
@@ -1131,7 +1131,7 @@ Main:Button("Refresh Weapon",function()
         end
     end)
 
-Section:NewToggle("Auto Equip", " ", function(a)
+Main:Toggle("Auto Equip",function(a)
 AutoEquiped = a
 end)
 
