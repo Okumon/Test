@@ -8774,56 +8774,46 @@ end)
 
 
 Setting:Toggle("Fast Attack [WORK Normal]",true,function(value)
- _G.FastAttackN = value
-
-local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
-
-CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-
-y = debug.getupvalues(CombatFrameworkR)[2]
-
+        _G.FastMode = value
 spawn(function()
-
-    game:GetService("RunService").RenderStepped:Connect(function()
-
-        if _G.FastAttackN then
-
-            if typeof(y) == "table" then
-
-                pcall(function()
-
-                    CameraShaker:Stop()
-
-                    y.activeController.timeToNextAttack = (math.huge^math.huge^math.huge)
-
-                    y.activeController.timeToNextAttack = 0
-
-                    y.activeController.hitboxMagnitude = 60
-
-                    y.activeController.active = false
-
-                    y.activeController.timeToNextBlock = 0
-
-                    y.activeController.focusStart = 1655503339.0980349
-
-                    y.activeController.increment = 1
-
-                    y.activeController.blocking = false
-
-                    y.activeController.attacking = false
-
-                    y.activeController.humanoid.AutoRotate = true
-
-                end)
-
-            end
-
-        end
-
-    end)
-
+local StopCamera = require(game.ReplicatedStorage.Util.CameraShaker)StopCamera:Stop()
+		for v,v in pairs(getreg()) do
+			if typeof(v) == "function" and getfenv(v).script == game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework then
+					for v,v in pairs(debug.getupvalues(v)) do
+					if typeof(v) == "table" then
+						spawn(function()
+							game:GetService("RunService").RenderStepped:Connect(function()
+								if _G.FastMode then
+										pcall(function()
+											v.activeController.timeToNextAttack = -(math.huge^math.huge^math.huge)
+											v.activeController.attacking = false
+											v.activeController.increment = 4
+											v.activeController.blocking = false   
+											v.activeController.hitboxMagnitude = 150
+											v.activeController.humanoid.AutoRotate = true
+											v.activeController.focusStart = 0
+											v.activeController.currentAttackTrack = 0
+											sethiddenproperty(game:GetService("Players").LocalPlayer, "SimulationRaxNerous", math.huge)
+										end)
+									end
+								end)
+						end)
+					end
+				end
+			end
+		end
+	end)
 end)
-end)
+	spawn(function()
+		game:GetService("RunService").RenderStepped:Connect(function()
+			if _G.FastMode then
+					pcall(function()
+					game:GetService'VirtualUser':CaptureController()
+					game:GetService'VirtualUser':Button1Down(Vector2.new(0,1,0,1))
+				end)
+			end
+		end)
+	end)
 
 Setting:Toggle("Auto Ken Haki",_G.Auto_Ken,function(vu)
 	_G.Auto_Ken = vu
