@@ -8314,7 +8314,7 @@ function AttackNoCD()
 end
 local cac
 if SuperFastMode then 
-	cac=task.wait(.2)
+	cac=task.wait(0)
 else
 	cac=wait
 end
