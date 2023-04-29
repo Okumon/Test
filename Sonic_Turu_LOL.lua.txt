@@ -8250,8 +8250,7 @@ end)
 
 
 Setting:Toggle("Fast Attack [ไม่โดนเตะ ถ้าไม่แตะจอเปิดแล้วนิ่งไว้ ]",false,function(value)
-    local SuperFastMode = value -- เปลี่ยนเป็นจริงถ้าคุณต้องการโจมตี Super Super Super Fast (เช่นการฆ่าทันที) แต่จะทำให้เกมเตะคุณมากกว่าโหมดปกติ
-             _G.FastAttack = value
+  FastAttack = value
 
 local plr = game.Players.LocalPlayer
 
@@ -8265,6 +8264,7 @@ function GetCurrentBlade()
     while ret.Parent~=game.Players.LocalPlayer.Character do ret=ret.Parent end
     return ret
 end
+
 function AttackNoCD() 
     local AC = CbFw2.activeController
     for i = 1, 1 do 
@@ -8312,15 +8312,17 @@ function AttackNoCD()
         end
     end
 end
-local cac
-if SuperFastMode then 
-	cac=task.wait
-else
-	cac=wait
-end
-while cac() do 
-	AttackNoCD()
-end
+spawn(function()
+	while wait(.5) do
+		pcall(function()
+			if FastAttack then
+				repeat wait(0.5)
+					AttackNoCD()
+				until not FastAttack
+			end
+		end)
+	end
+end)
 
             
 
