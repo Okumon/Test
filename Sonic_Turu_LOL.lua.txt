@@ -8313,7 +8313,7 @@ function AttackNoCD()
     end
 end
 spawn(function()
-	while wait(.5) do
+	while wait(.1) do
 		pcall(function()
 			if FastAttack then
 				repeat wait(0)
