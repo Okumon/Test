@@ -3689,55 +3689,45 @@ end)
 -- // [[ Bring Mob Script Function ]] [Fixed]
 
 spawn(function()
-game:GetService("RunService").Heartbeat:Connect(function() CheckQuest()
-	while task.wait() do
+    game:GetService("RunService").Heartbeat:Connect(function() CheckQuest()
         pcall(function()
             if _G.BringMonster then
-				CheckQuest()
                 for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                     if _G.Auto_Farm_Level and StartMagnet and v.Name == Ms and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 300 then
                         v.HumanoidRootPart.CFrame = PosMon
-						v.Humanoid:ChangeState(14)
                         v.HumanoidRootPart.CanCollide = false
                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                            v.Head.CanCollide = false                        
                         if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+                        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
                     end
                     if _G.Auto_Farm_Level and NoQuest and v.Name == Ms and (v.HumanoidRootPart.Position - PosMonNoQuest.Position).magnitude <= 300 then
                         v.HumanoidRootPart.CFrame = PosMonNoQuest
-						v.Humanoid:ChangeState(14)
                         v.HumanoidRootPart.CanCollide = false
                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                            v.Head.CanCollide = false                        
                         if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+                        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
                     end
                     if _G.Auto_Farm_Level and NearMode and v.Name == Ms and (v.HumanoidRootPart.Position - PosMonModeNear.Position).magnitude <= 300 then
                         v.HumanoidRootPart.CFrame = PosMonModeNear
-						v.Humanoid:ChangeState(14)
                         v.HumanoidRootPart.CanCollide = false
                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                            v.Head.CanCollide = false                        
                         if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+                        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
                     end
                     if _G.Auto_Farm_Level and FastFarmMode and v.Name == Ms and (v.HumanoidRootPart.Position - PosMonFast.Position).magnitude <= 300 then
                         v.HumanoidRootPart.CFrame = PosMonFast
-						v.Humanoid:ChangeState(14)
                         v.HumanoidRootPart.CanCollide = false
                         v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                            v.Head.CanCollide = false                        
                         if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+                        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius",  math.huge)
                     end
                 end
             end
@@ -8390,7 +8380,7 @@ spawn(function()
 end)
 
 Setting:Toggle("Bring Mob ",true,function(value)
- _G.BringNormal = value
+ _G.BringMonster = value
 end)
 
 spawn(function()
